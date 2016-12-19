@@ -10,7 +10,7 @@
 
 int main()
 {
-        int x=-2;
+        int x=-1;
         my_assert(x>0)
 	return 0;
 }
