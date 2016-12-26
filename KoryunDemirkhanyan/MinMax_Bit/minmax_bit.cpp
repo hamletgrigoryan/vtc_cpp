@@ -29,12 +29,12 @@ int  main()
         std::cout << "Max of int: " << max << std::endl;
         std::cout << "Min of int: " << -max-1 << std::endl << std::endl;
         }
-       // {
-       // unsigned int max = (1 << 8 * sizeof(unsigned int))-1;
-       // my_assert(max==UINT_MAX);
-       // std::cout << "Max of unsigned int: " << max << std::endl;
-       // std::cout << "Min of unsigned int: " << 0 << std::endl << std::endl;
-       // }
+        // {
+        // unsigned int max = (1 << 8 * sizeof(unsigned int))-1;
+        // my_assert(max==UINT_MAX);
+        // std::cout << "Max of unsigned int: " << max << std::endl;
+        // std::cout << "Min of unsigned int: " << 0 << std::endl << std::endl;
+        // }
 	{
         int max=(1<<8*sizeof(signed int)-1)-1;
         my_assert(max==SINT_MAX);
