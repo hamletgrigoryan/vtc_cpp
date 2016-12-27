@@ -2,7 +2,7 @@
 #include <limits>
 
 	int main ()
-	{
+		{
 std::cout<<"Type\t\t"<<"byte\t"<<"max\t"<<"min"<<std::endl;
 
 std::cout<<"bool\t\t="<<sizeof(bool)<<"\t"<<std::numeric_limits<bool>::max()<<"\t"<<std::numeric_limits<bool>::min() << std::endl;
