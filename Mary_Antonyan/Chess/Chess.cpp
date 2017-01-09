@@ -10,20 +10,24 @@ int main()
 	std::cout << "Enter black character: ";
 	std::cin >> black;
 
-	char white;
-	std::cout << "Enter white character: ";
-	std::cin >> white;
+	char white = ' ';
+	//std::cout << "Enter white character: ";
+	//std::cin >> white;
 
 	int unitSize;
 	std::cout << "Enter size of unit: ";
 	std::cin >> unitSize;
 
-	for(int i = 0; i < size * (unitSize + 1) + 1; ++i)
+	/*for(int i = 0; i < size * (unitSize + 1) + 1; ++i)
 		std::cout << '_';
 	std::cout << std:: endl;
-	
+	*/
 	for(int i = 0; i < size; ++i)
 	{
+		for(int j = 0; j < size * (unitSize + 1) + 1; ++j)
+        	        std::cout << '_';
+	        std::cout << std:: endl;
+
 		//std::cout << '|';
 		for(int k = 0; k < unitSize; ++k)
 		{
@@ -47,5 +51,5 @@ int main()
 	for(int i = 0; i < size * (unitSize + 1) + 1; ++i)
                 std::cout << '_';
 	std::cout << std:: endl;
-
+	
 }
