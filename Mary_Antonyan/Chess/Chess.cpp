@@ -1,40 +1,55 @@
-#include <iostream>
+#include <iostream> 
 
 int main()
 {
-	for (int i = 0; i < 16; i++)
-		std::cout << '_';
-	std::cout << std::endl;
+	int size;
+	std::cout << "Enter size: ";
+	std::cin >> size;
 
-	for (int i = 0; i < 8; i++)
-		for (int j = 0; j < 2; j++)
+	char black;
+	std::cout << "Enter black character: ";
+	std::cin >> black;
+
+	char white = ' ';
+	//std::cout << "Enter white character: ";
+	//std::cin >> white;
+
+	int unitSize;
+	std::cout << "Enter size of unit: ";
+	std::cin >> unitSize;
+
+	/*for(int i = 0; i < size * (unitSize + 1) + 1; ++i)
+		std::cout << '_';
+	std::cout << std:: endl;
+	*/
+	for(int i = 0; i < size; ++i)
+	{
+		for(int j = 0; j < size * (unitSize + 1) + 1; ++j)
+        	        std::cout << '_';
+	        std::cout << std:: endl;
+
+		//std::cout << '|';
+		for(int k = 0; k < unitSize; ++k)
 		{
 			std::cout << '|';
-
-			if (i % 2 == 1)
+			for(int j = 0; j < size; ++j)
 			{
-				std::cout << "  ";
-				for (int k = 0; k < 3; k++)
-				{
-					std::cout << "**  ";
-				}
-				std::cout << "**";
-			}
-			else
-			{
-				for (int k = 0; k < 4; k++)
-				{
-					std::cout << "**  ";
-				}
-			}
+				if((i + j) % 2 == 0)
+					for(int n = 0; n < unitSize; ++n)
+						std::cout << white;
+				else
+					for(int n = 0; n < unitSize; ++n)
+						std::cout << black;
 
-			std::cout << '|' << std::endl;
+				std::cout << '|';
+			}
+		
+			std::cout << std::endl;	
 		}
-
-	for (int i = 0; i < 16; i++)
-		std::cout << '_';
-	std::cout << std::endl;
-
-	system("pause");
-	return 0;
+	}
+	
+	for(int i = 0; i < size * (unitSize + 1) + 1; ++i)
+                std::cout << '_';
+	std::cout << std:: endl;
+	
 }
