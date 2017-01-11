@@ -13,6 +13,7 @@ int main()
 			if ( i % j == 0 )
 			{
 				++count;
+				break;
 			}
 		}
 		if ( count == 0 )
