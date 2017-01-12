@@ -1,110 +1,28 @@
 #include <iostream>
 
 int main()
-{  
-    std::string P;
-    std::cout<<"Press any key - ";
-    std::cin>>P;
-    for (int x=1; x<=10; ++x)
-    {
-    std::cout<<"_";
+{
+ std::string s;
+ std::cout<<"Press any key - ";
+ std::cin>>s;
+    for(int a=1; a<=10; ++a)
+    {   
+        std::cout<<"_";
     }
     std::cout<<std::endl;
-    std::cout<<"|";
-        for (int x=1; x<=10; ++x) 
-        {
-            if (x==1) std::cout<<"*";
-            else
-                if (x==10) std::cout<<"|";
-                else
-                    std::cout<<" ";
-        }
+            for(int a=1; a<=10; ++a)
+            {
+                std::cout<<"|";
+                    for (int n=0; n<a; ++n)
+                        std::cout<<"x";
+                            for(int n=0; n<10-a; ++n)
+                                std::cout<<"-";
+                                    for(int n=0; n<1; ++n)
+                                        std::cout<<"|";
+            std::cout<<std::endl;
+            }
+    for(int n=0; n<10; ++n)
+        std::cout<<"_";
         std::cout<<std::endl;
-        std::cout<<"|";
-        for (int x=1; x<=10; ++x) 
-        {
-            if (x==1) std::cout<<"**";
-            else
-                if (x==9) std::cout<<"|";
-                else
-                    std::cout<<" ";
-        }
-        std::cout<<std::endl;
-        std::cout<<"|";
-        for (int x=1; x<=10; ++x) 
-        {
-            if (x==1) std::cout<<"***";
-            else
-                if (x==8) std::cout<<"|";
-                else
-                    std::cout<<" ";
-        }
-        std::cout<<std::endl;
-        std::cout<<"|";
-        for (int x=1; x<=10; ++x) 
-        {
-            if (x==1) std::cout<<"****";
-            else
-                if (x==7) std::cout<<"|";
-                else
-                    std::cout<<" ";
-        }
-        std::cout<<std::endl;
-        std::cout<<"|";
-        for (int x=1; x<=10; ++x) 
-        {
-            if (x==1) std::cout<<"*****";
-            else
-                if (x==6) std::cout<<"|";
-                else
-                    std::cout<<" ";
-        }
-        std::cout<<std::endl;
-        std::cout<<"|";
-        for (int x=1; x<=10; ++x) 
-        {
-            if (x==1) std::cout<<"******";
-            else
-                if (x==5) std::cout<<"|";
-                else
-                    std::cout<<" ";
-        }
-        std::cout<<std::endl;
-        std::cout<<"|";
-        for (int x=1; x<=10; ++x) 
-        {
-            if (x==1) std::cout<<"*******";
-            else
-                if (x==4) std::cout<<"|";
-                else
-                    std::cout<<" ";
-        }
-        std::cout<<std::endl;
-        std::cout<<"|";
-        for (int x=1; x<=10; ++x) 
-        {
-            if (x==1) std::cout<<"********";
-            else
-                if (x==3) std::cout<<"|";
-                else
-                    std::cout<<" ";
-        }
-        std::cout<<std::endl;
-        std::cout<<"|";
-        for (int x=1; x<=10; ++x) 
-        {
-            if (x==1) std::cout<<"*********";
-            else
-                if (x==2) std::cout<<"|";
-                else
-                    std::cout<<" ";
-        }
-        std::cout<<std::endl;
-    for (int x=1; x<=10; ++x)
-    {
-    std::cout<<"_";
-    }    
-    std::cout<<std::endl;    
-        
 return 0;
 }
