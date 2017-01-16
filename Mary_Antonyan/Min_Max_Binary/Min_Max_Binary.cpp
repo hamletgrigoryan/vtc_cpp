@@ -50,13 +50,13 @@ int main()
 	{
 		long int max = (1 << 8 * sizeof(long int) - 1) - 1;
 		my_assert(max == LONG_MAX);
-		my_assert(-max - 1 ==LONG_MIN);
+		my_assert(-max - 1 == LONG_MIN);
 		std::cout << "Max of long int: " << max << std::endl;
 		std::cout << "Min of long int: " << -max - 1 << std::endl << std::endl;
 	}
 
 	{
-		unsigned long int max = 5;//(1 << 8 * sizeof(unsigned long int)) - 1;
+		unsigned long int max = (1 << 8 * sizeof(unsigned long int)) - 1;
 		my_assert(max == ULONG_MAX);
 		std::cout << "Max of unsigned long int: " << max << std::endl;
 		std::cout << "Min of unsigned long int: " << 0 << std::endl << std::endl;
