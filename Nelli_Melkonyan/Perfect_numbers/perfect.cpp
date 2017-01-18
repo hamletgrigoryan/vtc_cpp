@@ -9,6 +9,7 @@ int main()
 	{
 		int sum = 1;
 		for ( int j = 2; j <= sqrt(i) ; ++j )
+		{
 			if ( i % j == 0 )
 			{
 				sum += j;
@@ -21,14 +22,16 @@ int main()
 					sum += i/j ;
 				}
 			}
-		if ( sum > i )
-		{
-			break;
+			if ( sum > i )
+			{
+				break;
+			}
 		}
-	}
-	if ( i == sum )
-	{
-		std::cout << i << ";" ;
+
+		if ( i == sum )
+		{
+			std::cout << i << ";" ;
+		}
 	}
 	return 0;
 }
