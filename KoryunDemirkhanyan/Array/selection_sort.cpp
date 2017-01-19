@@ -3,18 +3,22 @@
 
 int main()
 {
-    int a[10] = {};
+    int size;
+    std::cin >> size;
+
+    int a[size] = {};
     int tmp;
     srand(time(0));
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < size; i++)
     {
-        a[i] = rand() % 11;
+        a[i] = 1 + rand() % size;
         std::cout << a[i] << ' ';
     }
     std::cout << std::endl;
-    for (int i = 0; i < 10-1; ++i)
+
+    for (int i = 0; i < size; ++i)
     {
-        for (int j = i+1; j < 10; ++j)
+        for (int j = i + 1; j < size; ++j)
         {
             if (a[i] > a[j])
             {
@@ -24,11 +28,18 @@ int main()
             }
         }
     }
-    for (int i = 0; i < 10; ++i)
+
+    for (int i = 0; i < size; ++i)
     {
         std::cout << a[i] << ' ';
     }
-    std::cout <<std::endl;
+    std::cout << std::endl;
+
+    for (int i = (size-1); i >= 0; --i)
+    {
+        std::cout << a[i] << ' ';
+    }
+    std::cout << std::endl;
 
     return 0;
 }
