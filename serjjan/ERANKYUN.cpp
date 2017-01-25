@@ -3,7 +3,7 @@
 int main ()
 {
 	double x1, x2, x3, y1, y2, y3;
-	double A, B, C, A1, B1, C1;
+	double a, b, c, A, B, C;
 	std::cout<< "tpel erankyan gagatneri kordinatner@";
 	std::cout<< std::endl;
 	std::cout << "x1=";
@@ -21,24 +21,31 @@ int main ()
 	A = sqrt((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2));
 	B = sqrt((x3 - x2)*(x3 - x2) + (y3 - y2)*(y3 - y2));
 	C = sqrt((x1 - x3)*(x1 - x3) + (y1 - y3)*(y1 - y3));
-	if  (A + B > C && A + C > B && B + C > A){
-		double x,y;
+	if  (A + B > C || A + C > B || B + C > A)
+	{
+		double x, y;
 		std::cout<<"tpel keti kordinatner@";
+		std::cout<<std::endl;
 		std::cout<<"x=";
-                std::cin>>x; 
-                std::cout<<std::endl;  
+		std::cin>>x; 
+		std::cout<<std::endl;  
 		std::cout<<"y=";
-                std::cin>>y; 
-		A1 = sqrt((x1 - x)*(x1 - x) + (y1 - y)*(y1 - y));
-		B1 = sqrt((x - x2)*(x - x2) + (y - y2)*(y - y2));
-		C1 = sqrt((x - x3)*(x - x3) + (y - y3)*(y - y3));
+		std::cin>>y;    
+		a = ((x1 - x)*(y2 - y1) - (x2 - x1)*(y1 - y));
+		b = ((x2 - x)*(y3 - y2) - (x3 - x2)*(y2 - y));
+		c = ((x3 - x)*(y1 - y3) - (x1 - x3)*(y3 - y));
 	}
-	if (A1 <= A && B1 <= B && C1 <= C){
-		std::cout <<" ket@ gtnvume erankyan nersum "; 
-        }
-else
-{ 
-std::cout<<"ket@ chi gtnvum erankyan nersum";
-}
+	else  {
+		std::cout<<" nman keterov erankyun chka";
+	}
+
+	if  ((a <= 0 && b <= 0 && c <= 0) || (a >= 0 && b >= 0 && c >= 0))
+	{
+		std::cout<<"ket@ gtnvum e erankyan nersum";
+	}
+	else
+	{ 
+		std::cout<<"ket@ chi gtnvum erankyan nersum";
+	}
 	return 0;
 }
