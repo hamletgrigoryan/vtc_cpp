@@ -1,26 +1,18 @@
 #include <iostream>
 
-int printDown(int from, int to)
+void print(int n)
 {
-	std::cout << to << "   ";
-	return (from == to) ? to : printDown(from, to - 1);
+	if(n >= 1)
+	{
+		std::cout << n << " \t ";
+		print(n - 1);
+		std::cout << n << " \t ";
+	}
 }
-
-int printUp(int from, int to)
-{
-	std::cout << from << "   ";
-	return (from == to) ? from : printUp(from + 1, to);
-}
-
 
 int main()
 {
-	printDown(1, 10);
-	std::cout << std::endl;
-
-	printUp(1, 10);
-	std::cout << std::endl;
-
-	system("pause");
+	int n = 10;	
+	print(n);
 	return 0;
 }
