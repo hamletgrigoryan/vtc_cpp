@@ -4,12 +4,12 @@
 
 int compare (const void *a, const void *b)
 {
-    return (*(char*)a, *(char*)b);
+    return ((int)*(char*)a - (int)*(char*)b);
 }
 
 int main()
 {
-    char  array[5] = {'e','d','c','b','a'};
+    char  array[5] = {'e','a','d','b','c'};
     for (int i = 0; i < 5; ++i)
     {
         printf ("%c ", array[i]);
