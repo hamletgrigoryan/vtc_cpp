@@ -10,8 +10,8 @@ int compare (const void * a, const void * b)
 int main()
 {
     int n;
-    int array[n] = {};
     std::cin >> n;
+    int array[n] = {};
     srand(time(0));
     for (int i = 0; i < n; ++i)
     {
