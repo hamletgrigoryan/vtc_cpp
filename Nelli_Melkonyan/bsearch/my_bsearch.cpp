@@ -59,16 +59,16 @@ void* my_bsearch ( void*key,  void* array, size_t array_size , size_t size_of_el
 		mid = (low + high) / 2;
 	
 		
-		if(compar(key,array+size_of_element*mid) == 0)
+		if(compar(key,(char*)array+size_of_element*mid) == 0)
 		{
-			return (array+size_of_element*mid);
+			return ((char*)array+size_of_element*mid);
 		}else
 		
-		if(compar(key,array+size_of_element*mid) < 0)
+		if(compar(key,(char*)array+size_of_element*mid) < 0)
 		{
 			high = mid - 1;
 		}else
-		if(compar(key,array+size_of_element*mid) > 0)
+		if(compar(key,(char*)array+size_of_element*mid) > 0)
 		{
 			low = mid + 1;
 		}
