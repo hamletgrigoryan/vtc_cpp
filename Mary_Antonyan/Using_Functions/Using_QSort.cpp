@@ -16,14 +16,14 @@ int main()
 	unsigned int intSize;
 	std::cout << "Enter size of int array: ";
 	std::cin >> intSize;
-	int* intArr = new int(intSize);
+	int* intArr = new int[intSize];
 	for (int i = 0; i < intSize; i++)
 		std::cin >> intArr[i];
 
 	unsigned int charSize;
 	std::cout << "Enter size of char array: ";
 	std::cin >> charSize;
-	char* charArr = new char(charSize);
+	char* charArr = new char[charSize];
 	for (int i = 0; i < charSize; i++)
 		std::cin >> charArr[i];
 
@@ -41,5 +41,6 @@ int main()
 		std::cout << charArr[i] << "  ";
 	std::cout << std::endl;
 
+	system("pause");
 	return 0;
 }
