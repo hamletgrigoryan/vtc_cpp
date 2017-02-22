@@ -1,27 +1,18 @@
+#include<iostream>
+
 class point 
 {
-	int x;
-	int y;
+	private:
+		double x;
+		double y;
 	public:
-	point(int a, int b)
-	{
-		x = a;
-		y = b;
-	}
-	double  setX(int a)
-	{
-		x = a;
-	};
-	double setY(int a)
-	{
-		y = a;
-	};
-        double getX() 
-	{
-		return x;
-	};
-	double getY()
-	{
-		return y;
-	};
+		point(double x, double y)
+		{
+			this ->x = x;
+			this ->y = y;
+		}
+		void keti_kordinat()
+		{
+			std::cout << this->x << this->y <<std::endl;
+		}
 };
