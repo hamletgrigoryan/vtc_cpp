@@ -13,6 +13,6 @@ class point
 		}
 		void keti_kordinat()
 		{
-			std::cout << this->x << this->y <<std::endl;
+			std::cout << "(" << this->x << ", " << this->y << ")" <<std::endl;
 		}
 };
