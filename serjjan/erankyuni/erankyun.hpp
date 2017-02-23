@@ -19,5 +19,5 @@ class tringle
 			c->keti_kordinat(); 
 		}
 		int makeres();
-		bool stugum (int x, int y);
+		bool stugum ();
 };

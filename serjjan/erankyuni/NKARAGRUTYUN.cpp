@@ -19,7 +19,7 @@ int tringle::makeres()
 return S;
 }
 
-bool Triangle::stugum (point*  d)
+bool tringle::stugum (point*  d)
 {
 	double a, b, c;
 	a = ((x1 - x)*(y2 - y1) - (x2 - x1)*(y1 - y));
