@@ -1,11 +1,6 @@
 #include <iostream>
-#include "ERANKYUN.hpp"
+#include "erankyun.hpp"
 #include <cmath>
-
-// ste chem haskace inch grem vonc anem vor kordinatner@ poxancvi ev im klassnerum terutyun chexni
-
-
-
 int tringle::makeres()
 {
    float AB, BC, AC;
@@ -21,9 +16,10 @@ int tringle::makeres()
    }
    else
    std::cout << "erankyun che" << std::endl;
+return S;
 }
 
-bool Triangle::contain(int x, int y)
+bool Triangle::stugum (point*  d)
 {
 	double a, b, c;
 	a = ((x1 - x)*(y2 - y1) - (x2 - x1)*(y1 - y));
