@@ -1,59 +1,39 @@
-#include<iostream>
+#include "triangle.hpp"
+#include <cmath>
 
-class point { 
-public:
-    point (double x, double y) {
-        this->x = x;
-        this->y = y;
-    }
-    void print_coordinates() {
-        std::cout << this->x << " : " << this->y << std::endl; 
-    }
-    double distance (point from) {
-        sqrt(pow((this->x - from.x), 2) + (pow((this->y - from.y), 2)))
-    }
-private:
-    double x;
-    double y;
-};
+triangle::
+triangle (const point& a, const point& b, const point& c)
+	: m_a(a)
+	, m_b(b)
+	, m_c(c)
+{}
 
-class triangle {
-
-    point* a;
-    point* b;
-    point* c;
-    
-    public:
-
-    triangle (point *a, point *b, point *c) {
-        this->a = a;
-        this->b = b;
-        this->c = c;
-    }
-
-
-    void print_gagat ()
-    {
-    a->print_coordinates();
-    b->print_coordinates();
-    c->print_coordinates();
-        
-    }    
-};
-
-
-int main ()
-
+double triangle::
+area() const
 {
-double x,y,x1,y1,x2,y2;
-std::cin >> x >> y;
-std::cin >> x1 >> y1;
-std::cin >> x2 >> y2;
-point a(x,y); 
-point b(x1,y1); 
-point c(x2,y2); 
-triangle t = triangle(&a, &b, &c);
-t.print_gagat();
-double ab = a.distance(b);
-    return 0;
+	double a = m_a.distance(m_b);
+	double b = m_a.distance(m_c);
+	double c = m_b.distance(m_c);
+	double p = (a + b + c) / 2;
+	return sqrt (p * (p - a) * (p - b) * (p - c));
 }
+
+bool triangle::
+contains (const point& p) const
+{
+	// x -> p.x ,  y -> p.y
+	// x1 -> a.x , y1 -> a.y
+	// x2 -> b.x , y2 -> b.y
+	// x3 -> c.x , y3 -> c.y
+	double a = ((m_a.x() - p.x()) * (m_b.y() - m_a.y()) - 
+		    (m_b.x() - m_a.x()) * (m_a.y() - p.y()));
+
+	double b = ((m_b.x() - p.x()) * (m_c.y() - m_b.y()) - 
+		    (m_c.x() - m_b.x()) * (m_b.y() - p.y()));
+
+	double c = ((m_c.x() - p.x()) * (m_a.y() - m_c.y()) - 
+   		    (m_a.x() - m_c.x()) * (m_c.y() - p.y()));
+
+	return  (a <= 0 && b <= 0 && c <= 0) || (a >= 0 && b >= 0 && c >= 0);
+}
+
