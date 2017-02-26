@@ -1,18 +1,19 @@
-#include<iostream>
+#ifndef POINT_HPP
+#define POINT_HPP
 
-class point 
-{
-	private:
-		double x;
-		double y;
-	public:
-		point(double x, double y)
-		{
-			this ->x = x;
-			this ->y = y;
-		}
-		void keti_kordinat()
-		{
-			std::cout << "(" << this->x << ", " << this->y << ")" <<std::endl;
-		}
+class point {
+
+public:
+    point(double x, double y);
+    double distance(const point& p) const;
+    
+    double x() const { return m_x; }
+    double y() const { return m_y; }
+
+private:
+    double m_x;
+    double m_y;
+
 };
+
+#endif
